@@ -3,18 +3,127 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Simple Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M4E-CaparasGonzalesValdez</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9e9e9;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    padding: 30px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.form-group.textarea-group {
+    width: 250px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input,
+select {
+    height: 34px;
+}
+
+select {
+    background-color: white;
+}
+
+textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 80px;
+    resize: none;
+}
+
+button {
+    padding: 6px 14px;
+    background-color: #007bfe;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    height: 32px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006eda;
+}
+
+table {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #343a40;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1 style="margin-left: 20px">Some Header</h1>
-
-<hr> </hr>
-
 <div class="container">
 
+    <h1>Some Header</h1>
+    <hr>
+
     <div class="form-row">
+
         <div class="form-group">
             <label>Field 1</label>
             <input type="text">
@@ -27,12 +136,15 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group textarea-group">
             <label>Field 3</label>
             <textarea></textarea>
         </div>
 
-        <button>Submit</button>
+        <div class="button-group">
+            <button>Submit</button>
+        </div>
+
     </div>
 
     <hr>
@@ -47,96 +159,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bruce</td>
-                <td>Wayne</td>
-                <td>Batman</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Selina</td>
-                <td>Kyle</td>
-                <td>Catwoman</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Diana</td>
-                <td>Prince</td>
-                <td>Wonder Woman</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Harlene</td>
-                <td>Quinzel</td>
-                <td>Harley Quinn</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Damian</td>
-                <td>Wayne</td>
-                <td>Robin</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Tony</td>
-                <td>Stark</td>
-                <td>Iron Man</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Steve</td>
-                <td>Rogers</td>
-                <td>Captain America</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Thor</td>
-                <td>Odinson</td>
-                <td>Thor</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Natasha</td>
-                <td>Romanoff</td>
-                <td>Black Widow</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Clint</td>
-                <td>Barton</td>
-                <td>Hawkeye</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>Bruce</td>
-                <td>Banner</td>
-                <td>Hulk</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>Scott</td>
-                <td>Lang</td>
-                <td>Ant-Man</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>Steven</td>
-                <td>Strange</td>
-                <td>Doctor Strange</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>T'challa</td>
-                <td> </td>
-                <td>Black Panther</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>Peter</td>
-                <td>Parker</td>
-                <td>Spider Man</td>
-            </tr>
+            <tr><td>1</td><td>Bruce</td><td>Wayne</td><td>Batman</td></tr>
+            <tr><td>2</td><td>Selina</td><td>Kyle</td><td>Catwoman</td></tr>
+            <tr><td>3</td><td>Diana</td><td>Prince</td><td>Wonder Woman</td></tr>
+            <tr><td>4</td><td>Harlene</td><td>Quinzel</td><td>Harley Quinn</td></tr>
+            <tr><td>5</td><td>Damian</td><td>Wayne</td><td>Robin</td></tr>
+            <tr><td>6</td><td>Tony</td><td>Stark</td><td>Iron Man</td></tr>
+            <tr><td>7</td><td>Steve</td><td>Rogers</td><td>Captain America</td></tr>
+            <tr><td>8</td><td>Thor</td><td>Odinson</td><td>Thor</td></tr>
+            <tr><td>9</td><td>Natasha</td><td>Romanoff</td><td>Black Widow</td></tr>
+            <tr><td>10</td><td>Clint</td><td>Barton</td><td>Hawkeye</td></tr>
+            <tr><td>11</td><td>Bruce</td><td>Banner</td><td>Hulk</td></tr>
+            <tr><td>12</td><td>Scott</td><td>Lang</td><td>Ant-Man</td></tr>
+            <tr><td>13</td><td>Steven</td><td>Strange</td><td>Dr. Strange</td></tr>
+            <tr><td>14</td><td>T'Challa</td><td></td><td>Black Panther</td></tr>
+            <tr><td>15</td><td>Peter</td><td>Parker</td><td>Spider-Man</td></tr>
         </tbody>
     </table>
 
